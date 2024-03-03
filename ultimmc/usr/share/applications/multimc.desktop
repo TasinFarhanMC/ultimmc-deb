@@ -1,0 +1,16 @@
+[Desktop Entry]
+Categories=Game;
+Exec=/opt/ultimmc/run.sh
+Icon=/opt/ultimmc/icon.svg
+Keywords=game;Minecraft;
+MimeType=
+Name=UltimMC 5
+Path=
+StartupNotify=true
+Terminal=false
+TerminalOptions=
+Type=Application
+X-DBUS-ServiceName=
+X-DBUS-StartupType=
+X-KDE-SubstituteUID=false
+X-KDE-Username=
