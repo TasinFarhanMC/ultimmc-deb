@@ -16,6 +16,24 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      - name: Increment build version
+        run: |
+          # Read current version
+          version=$(cat build_version)
+          # Increment version number
+          new_version=$((version + 1))
+          echo $new_version > build_version
+          echo "Incremented build version to $new_version"
+
+      - uses: EndBug/add-and-commit@v9.1.4
+        with:
+          add: 'build_version'
+          message: 'Increment build version'
+          author_name: 'GitHub Actions'
+          author_email: 'actions@github.com'
+          committer_name: 'GitHub Actions'
+          committer_email: 'actions@github.com'
+
       - name: Create .deb package
         run: |
           dpkg-deb --build ultimmc
